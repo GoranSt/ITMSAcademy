@@ -1,0 +1,304 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="ITMSAcademy.MasterPage" %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head runat="server">
+    <title></title>
+
+
+    <meta name="viewport" content="width=device-width" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+     
+
+       <script src="/Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+
+        <script src="/Scripts/bootstrap.js" type="text/javascript"></script>
+
+
+
+
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="~/Default.aspx" runat="server">Home</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <button runat="server" type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" style="margin-top: 8px">Geek</button></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" runat="server">Projects<b class="caret"></b></a>
+                            <ul class="dropdown-menu" runat="server">
+                                <li class="dropdown-header" runat="server">Листа на проекти</li>
+                                <li><a href="#" runat="server">Проект 1</a></li>
+                                <li><a href="~/proekt2/proekt2.aspx" runat="server">Проект 2</a></li>
+                                <li><a href="#" runat="server">Проект 3</a></li>
+                                <li><a href="#" runat="server">Проект 4</a></li>
+                                <li><a href="~/proekt5/strana5.aspx" runat="server">Проект 5</a></li>
+                                <li><a href="#" runat="server">Проект 6</a></li>
+
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Проект 7</li>
+                                <li><a href="~/Proekt7/CreateResourceCheckList.aspx" runat="server">Create resource checklist</a></li>
+                                <li><a href="~/Proekt7/ResourcesCheckList.aspx" runat="server">Manage resources checklist</a></li>
+                                <li role="separator" class="divider"></li>
+
+                                <li><a href="#" runat="server">Проект 8</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Register<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="~/Roles/Agent/AgentRegistrationForm.aspx" runat="server">Agent</a></li>
+                                <li><a href="~/Roles/Manager/ManagerRegForm.aspx" runat="server">Manager</a></li>
+                            </ul>
+                        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+                        <li>
+                            <div style="padding-top: 15px">
+                                <asp:LoginView ID="LoginView2" runat="server" ViewStateMode="Disabled">
+                                    <AnonymousTemplate>
+                                        <ul>
+
+                                            <li><a id="loginLink" runat="server" href="~/Account/Login">Log in</a></li>
+                                        </ul>
+                                    </AnonymousTemplate>
+                                    <LoggedInTemplate>
+                                        <p>
+                                            <label style="color: yellow">Hello,</label>
+                                            <a id="A1" runat="server" class="username">
+                                                <asp:LoginName ID="LoginName1" runat="server" CssClass="username" />
+                                            </a>!
+                                <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
+                                        </p>
+                                    </LoggedInTemplate>
+                                </asp:LoginView>
+                            </div>
+                        </li>
+
+
+
+
+
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div style="padding-top: 2cm">
+
+
+
+
+
+
+
+
+
+
+            <div class="container">
+
+                <div class="jumbotron">
+                    <center>
+                <h2>
+                    
+                    Some Quotes:<asp:LoginView ID="LoginView1" runat="server">
+                    </asp:LoginView>
+                    </h2>
+               </center>
+                    <div class="list-group">
+
+                        <a class="list-group-item active">// Java is to JavaScript what Car is to Carpet.</a>
+                        <a class="list-group-item active">// Most software today is very much like an Egyptian pyramid with millions of bricks piled on top of each other, with no structural integrity, but just done by brute force and thousands of slaves.
+                        </a>
+                        <a class="list-group-item active">// If debugging is the process of removing software bugs, then programming must be the process of putting them in. </a>
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <div id="body">
+            <p class="bg-info">
+                <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+
+                <div class="container">
+                    <div class="row container">
+                        <div class="col-lg-12">
+                            <div>
+                                <div class="panel-body">
+                                    <section class="content-wrapper main-content clear-fix">
+                                        <div class="panel panel-default">
+
+                                            <div class="panel-body" style="padding-left: 100px; padding-right: 100px">
+                                                <asp:ContentPlaceHolder runat="server" ID="Mainbody" />
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </p>
+        </div>
+
+
+
+        <div class="navbar navbar-default">
+
+            <div class="container">
+                <!-- Modal -ovde postaven bidejki sporo se loadira -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- prvo-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">How to hide your important files from people without making Hidden folders</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    <ol>
+
+                                        <li>Go to Desktop and create a new folder</li>
+                                        <li>Name the folder <b>Internet Explorer</b></li>
+                                        <li>Change the folder icon to <b>Internet Explorer</b></li>
+                                        <li>Keep it in a corner of the desktop</li>
+                                    </ol>
+                                </p>
+                                <p>
+                                    Now, no one will open <b>Internet Explorer!</b>
+                                </p>
+
+
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close 
+                                    <button id="Button1" runat="server" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#vtoro">Continue</button></button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                <div class="modal fade" id="vtoro" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- za vtoroto-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Beware!</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    <b>m-r Pano may open it !</b>
+                                </p>
+
+
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                <p class="navbar-text pull-left">ФИНКИ 2015</p>
+
+
+
+
+                <a href="http://msacademy.azurewebsites.net/" target="_blank" class="navbar-btn btn-success btn pull-right">MS-Academy</a>
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+    </form>
+</body>
+</html>

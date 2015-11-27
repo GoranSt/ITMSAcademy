@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMSAcademy", "ITMSAcademy\ITMSAcademy.csproj", "{628B7DF2-B514-4C72-A1AD-8E137AFD5571}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 1
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://212.120.13.66:8080/tfs/msacademy
+		SccProjectUniqueName0 = ITMSAcademy\\ITMSAcademy.csproj
+		SccProjectName0 = ITMSAcademy
+		SccAuxPath0 = http://212.120.13.66:8080/tfs/msacademy
+		SccLocalPath0 = ITMSAcademy
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{628B7DF2-B514-4C72-A1AD-8E137AFD5571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{628B7DF2-B514-4C72-A1AD-8E137AFD5571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{628B7DF2-B514-4C72-A1AD-8E137AFD5571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{628B7DF2-B514-4C72-A1AD-8E137AFD5571}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
